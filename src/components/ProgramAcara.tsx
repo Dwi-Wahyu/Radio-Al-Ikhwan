@@ -61,6 +61,9 @@ const program = [
     title: "Chilling Time, Maghreb Intermezzo",
     time: "18:00 - 19:00",
   },
+];
+
+const extraProgram = [
   {
     icon: <LuClock8 size={25} />,
     title: "Father to Son or Mother to Daughter",
@@ -80,7 +83,7 @@ const program = [
 
 export default function ProgramAcara() {
   return (
-    <div className="w-full flex justify-center px-5 items-center flex-col pt-10 pb-8 ">
+    <div className="w-full flex justify-center px-5 items-center flex-col py-10">
       <div className="lg:w-[50rem] w-full rounded">
         <div className="text-center mb-5">
           <h1 id="program-acara" className="font-bold text-xl mb-1">
@@ -91,7 +94,25 @@ export default function ProgramAcara() {
 
         <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-3 relative">
           {program.map((temp, idx) => (
-            <div className="shadow-lg p-3 rounded flex flex-col" key={idx}>
+            <div
+              key={idx}
+              className="shadow-lg p-3 rounded flex flex-col items-center text-center"
+            >
+              {temp.icon}
+              <div>
+                <h1 className="font-semibold mt-1">{temp.time}</h1>
+              </div>
+              <h1>{temp.title}</h1>
+            </div>
+          ))}
+        </div>
+        <div className="w-full grid gap-3 md:grid-cols-5 sm:grid-cols-3 grid-cols-2">
+          <div className="col-span-1 hidden md:block"></div>
+          {extraProgram.map((temp, idx) => (
+            <div
+              key={idx}
+              className="shadow-lg p-3 rounded flex flex-col items-center text-center"
+            >
               {temp.icon}
               <div>
                 <h1 className="font-semibold mt-1">{temp.time}</h1>

@@ -1,18 +1,16 @@
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import Home from "@/components/Home";
 import ProgramAcara from "@/components/ProgramAcara";
 import Struktur from "@/components/Struktur";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ style: "normal", subsets: ["latin"] });
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="scroll-smooth">
-      <Header />
-      <Hero />
+      <Home />
       <ProgramAcara />
       <Struktur />
       <Gallery />

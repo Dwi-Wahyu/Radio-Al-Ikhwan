@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaPlay } from "react-icons/fa";
 import { GrGallery, GrScheduleNew } from "react-icons/gr";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { PiTreeStructureBold } from "react-icons/pi";
@@ -14,6 +14,23 @@ export default function Hero() {
   const toggleDrawer = () => setDrawerOpened(!drawerOpened);
   return (
     <div>
+      <div className="w-full items-center z-50 justify-center hidden md:flex top-0 left-0 absolute">
+        <div className="flex gap-5 py-4">
+          <Link href="#home">
+            <h1 className="font-semibold text-lg">Home</h1>
+          </Link>
+          <Link href="#program-acara">
+            <h1 className="font-semibold text-lg">Program Acara</h1>
+          </Link>
+          <Link href="#struktur">
+            <h1 className="font-semibold text-lg">Struktur</h1>
+          </Link>
+          <Link href="#gallery">
+            <h1 className="font-semibold text-lg">Gallery</h1>
+          </Link>
+        </div>
+      </div>
+
       {drawerOpened ? (
         <div className="w-full h-screen bg-black opacity-50 fixed z-30"></div>
       ) : null}
@@ -68,14 +85,15 @@ export default function Hero() {
 
           <Link
             href="https://alhastream.com/p/alikhwan/"
-            className="text-white bg-[rgb(13,109,6)] hover:bg-[rgb(23,78,19)] focus:ring-4 focus:ring-green-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 focus:outline-none "
+            className="text-white flex items-center gap-2 bg-[rgb(13,109,6)] hover:bg-[rgb(23,78,19)] focus:ring-4 focus:ring-green-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 focus:outline-none "
           >
+            <FaPlay />
             Mulai Mendengarkan
           </Link>
         </div>
       </div>
 
-      <div className="w-full hidden md:block">
+      <div className="w-full hidden md:block relative">
         <Image
           src="/banner.png"
           alt=""
@@ -85,6 +103,16 @@ export default function Hero() {
           className="w-full h-auto"
           style={{ width: "100%", height: "auto" }}
         />
+
+        <div className="w-full flex justify-center absolute -bottom-7">
+          <Link
+            href="https://alhastream.com/p/alikhwan/"
+            className="bg-[rgb(13,109,6)] flex items-center text-white hover:bg-[rgb(23,78,19)] focus:ring-4 focus:ring-green-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 focus:outline-none gap-2"
+          >
+            <FaPlay />
+            Mulai Mendengarkan
+          </Link>
+        </div>
       </div>
     </div>
   );

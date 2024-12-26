@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Gallery() {
   const [index, setIndex] = useState(2);
 
   return (
-    <div className="w-full flex justify-center px-5 items-center flex-col pt-10 pb-10">
+    <div className="w-full flex justify-center px-5 items-center flex-col py-10">
       <div className="lg:w-[50rem] w-full rounded">
         <div className="text-center mb-5">
           <h1 id="gallery" className="font-bold text-xl mb-1">
@@ -28,7 +27,7 @@ export default function Gallery() {
                 layout="responsive"
                 width={1}
                 height={1}
-                className="rounded-lg shadow-xl "
+                className="rounded-lg shadow-xl"
               />
             </div>
           </button>

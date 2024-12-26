@@ -36,7 +36,7 @@ export default function Struktur() {
             siaran berkualitas.
           </h1>
         </div>
-        <div className="relative flex flex-wrap justify-center gap-7">
+        <div className="relative flex-wrap justify-center gap-7 hidden sm:flex">
           {team.map((value, idx) => (
             <div key={idx}>
               <div className="relative w-full h-52">
@@ -50,6 +50,24 @@ export default function Struktur() {
                 />
               </div>
               <h1 className="font-semibold text-center mt-1">{value.nama}</h1>
+            </div>
+          ))}
+        </div>
+
+        <div className="relative flex flex-wrap justify-center gap-7 sm:hidden">
+          {team.map((value, idx) => (
+            <div key={idx}>
+              <div className="relative w-full h-52">
+                <Image
+                  width={250}
+                  height={250}
+                  src={"/team_image/" + value.path + ".jpg"}
+                  alt=""
+                  objectFit="cover"
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+              <h1 className="font-semibold text-center mt-14">{value.nama}</h1>
             </div>
           ))}
         </div>

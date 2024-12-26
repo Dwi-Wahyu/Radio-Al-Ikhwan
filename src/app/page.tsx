@@ -10,7 +10,7 @@ const montserrat = Montserrat({ style: "normal", subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Header />
       <Hero />
       <ProgramAcara />

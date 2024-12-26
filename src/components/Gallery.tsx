@@ -11,7 +11,9 @@ export default function Gallery() {
     <div className="w-full flex justify-center px-5 items-center flex-col pt-10 pb-10">
       <div className="lg:w-[50rem] w-full rounded">
         <div className="text-center mb-5">
-          <h1 className="font-bold text-xl mb-1">Gallery</h1>
+          <h1 id="gallery" className="font-bold text-xl mb-1">
+            Gallery
+          </h1>
           <h1>Lebih Dekat dengan Aktivitas Kami</h1>
         </div>
       </div>

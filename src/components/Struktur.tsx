@@ -32,7 +32,7 @@ export default function Struktur() {
     <div className="w-full flex justify-center items-center bg-[#F2C982] py-6 flex-col">
       <div className="md:w-[50rem] px-5 sm:px-0">
         <div className="text-center mb-5">
-          <h1 className="font-bold text-xl mb-1 ">
+          <h1 id="struktur" className="font-bold text-xl mb-1 ">
             Tim Profesional di Balik Layar
           </h1>
           <h1>

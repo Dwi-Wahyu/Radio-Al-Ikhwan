@@ -83,7 +83,9 @@ export default function ProgramAcara() {
     <div className="w-full flex justify-center px-5 items-center flex-col pt-10 pb-8 ">
       <div className="lg:w-[50rem] w-full rounded">
         <div className="text-center mb-5">
-          <h1 className="font-bold text-xl mb-1">Program Acara</h1>
+          <h1 id="program-acara" className="font-bold text-xl mb-1">
+            Program Acara
+          </h1>
           <h1>Program Pilihan untuk Setiap Suasana</h1>
         </div>
 

@@ -52,7 +52,7 @@ export default function Hero() {
 
       <div className="md:hidden px-5 pb-7 bg-[rgb(242,201,130)] ">
         <div className="relative flex justify-between items-center">
-          <Image src="/logo-hero.png" alt="" width={65} height={65} />
+          <Image id="home" src="/logo-hero.png" alt="" width={65} height={65} />
           <button onClick={toggleDrawer}>
             <IoMenu size={35} />
           </button>

@@ -22,10 +22,11 @@ export default function Gallery() {
           <button onClick={() => setIndex(index - 1)}>
             <div className="md:w-[10rem]">
               <Image
-                fill
-                objectFit="cover"
                 src={`/gallery/${index - 1}.jpg`}
                 alt=""
+                layout="responsive"
+                width={1}
+                height={1}
                 className="rounded-lg shadow-xl"
               />
             </div>
@@ -35,10 +36,11 @@ export default function Gallery() {
         )}
         <div className="md:w-[30rem]">
           <Image
-            fill
-            objectFit="cover"
             src={`/gallery/${index}.jpg`}
             alt=""
+            layout="responsive"
+            width={1}
+            height={1}
             className="rounded-lg shadow-xl"
           />
         </div>
@@ -46,10 +48,11 @@ export default function Gallery() {
           <button onClick={() => setIndex(index + 1)}>
             <div className="md:w-[10rem]">
               <Image
-                fill
-                objectFit="cover"
                 src={`/gallery/${index + 1}.jpg`}
                 alt=""
+                layout="responsive"
+                width={1}
+                height={1}
                 className="rounded-lg shadow-xl "
               />
             </div>
@@ -67,10 +70,10 @@ export default function Gallery() {
             className="w-20 z-10 relative h-56 opacity-60"
           >
             <Image
-              fill
-              objectFit="cover"
               src={`/gallery/${index - 1}.jpg`}
               alt={`Gambar ${index - 1}`}
+              layout="fill"
+              objectFit="cover"
               className="rounded-s-lg shadow-xl"
             />
           </button>
@@ -80,10 +83,10 @@ export default function Gallery() {
 
         <div className="relative w-full h-64 z-30">
           <Image
-            fill
-            objectFit="cover"
             src={`/gallery/${index}.jpg`}
             alt={`Gambar ${index}`}
+            layout="fill"
+            objectFit="cover"
             className="rounded-lg shadow-xl"
           />
         </div>
@@ -94,10 +97,10 @@ export default function Gallery() {
             className="w-20 z-10 relative h-56 opacity-60"
           >
             <Image
-              fill
-              objectFit="cover"
               src={`/gallery/${index + 1}.jpg`}
               alt={`Gambar ${index + 1}`}
+              layout="fill"
+              objectFit="cover"
               className="rounded-e-lg shadow-xl"
             />
           </button>

@@ -48,19 +48,19 @@ export default function Hero() {
           <IoClose size={30} onClick={toggleDrawer} />
         </div>
         <div className="flex flex-col mt-4 gap-5">
-          <Link href="/" className="flex gap-2 items-center">
+          <Link href="#home" className="flex gap-2 items-center">
             <FaHome size={20} />
             <h1 className="font-semibold text-lg">Home</h1>
           </Link>
-          <Link href="/" className="flex gap-2 items-center">
+          <Link href="#program-acara" className="flex gap-2 items-center">
             <GrScheduleNew size={20} />
             <h1 className="font-semibold text-lg">Program Acara</h1>
           </Link>
-          <Link href="/" className="flex gap-2 items-center">
+          <Link href="#struktur" className="flex gap-2 items-center">
             <PiTreeStructureBold size={20} />
             <h1 className="font-semibold text-lg">Struktur</h1>
           </Link>
-          <Link href="/" className="flex gap-2 items-center">
+          <Link href="#gallery" className="flex gap-2 items-center">
             <GrGallery size={20} />
             <h1 className="font-semibold text-lg">Gallery</h1>
           </Link>
